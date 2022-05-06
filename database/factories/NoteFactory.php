@@ -18,7 +18,7 @@ class NoteFactory extends Factory
     {
         return [
             //
-            'name' => $this->faker->name,
+            'name' => $this->faker->name.'@gmail.com',
             'text' => $this->faker->text
 
         ];
