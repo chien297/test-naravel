@@ -14,6 +14,10 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->singleton(
+            \App\Repositories\Note\NoteRepositoryInterface::class,
+            \App\Repositories\Note\NoteRepository::class
+        );
     }
 
     /**
