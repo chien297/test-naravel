@@ -22,7 +22,7 @@ class getNote extends Command
      *
      * @var string
      */
-    protected $description = 'test command';
+    protected $description = 'test insert with command';
 
     /**
      * Create a new command instance.
