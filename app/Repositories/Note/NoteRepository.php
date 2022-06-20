@@ -21,7 +21,7 @@ class NoteRepository extends BaseRepository implements NoteRepositoryInterface
     public function insertNote($array)
     {
         # code...
-        // $test =  DB::table('users')->insert([$array]);
-        return "tets";
+        $test =  DB::table('notes')->insert([$array]);
+        return $test;
     }
 }

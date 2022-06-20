@@ -28,8 +28,19 @@ class NoteController extends Controller
     public function store(Request $request)
     {
         # code...
-        $note = $this->noteRepo->insertNote($request);
-        return response()->json($note);
+        $request->validate([
+            'name' => 'required|max:255',
+            'text' => 'required'
+          ]);
+        
+          $newComment = new Note([
+            'name' => $request->get('name'),
+            'text' => $request->get('text')
+          ]);
+        
+          $newComment->save();
+        
+          return response()->json($newComment);
     }
     // public function show(Note $note)
     // {
